@@ -4,6 +4,10 @@ public class CalculatorUI extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CalculatorUI.class.getName());
 
+    public float firstnumber;
+    public float secondnumber;
+    public float operator;
+    
     public CalculatorUI() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -110,6 +114,11 @@ public class CalculatorUI extends javax.swing.JFrame {
         jButton9.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jButton9.setForeground(new java.awt.Color(51, 51, 51));
         jButton9.setText("+");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jButton10.setBackground(new java.awt.Color(204, 204, 204));
         jButton10.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
@@ -342,6 +351,13 @@ public class CalculatorUI extends javax.swing.JFrame {
         screen.setText(currentText.substring(0, currentText.length() -1));
         }
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        this.firstnumber = Float.parseFloat(this.screen.getText());
+        this.operator =  "+";
+        this.screen.setText("");
+        
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
      * @param args the command line arguments
