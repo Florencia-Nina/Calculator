@@ -1,20 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package calculator;
 
-/**
- *
- * @author jala
- */
 public class CalculatorUI extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CalculatorUI.class.getName());
 
-    /**
-     * Creates new form CalculatorUI
-     */
     public CalculatorUI() {
         initComponents();
     }
@@ -105,11 +94,21 @@ public class CalculatorUI extends javax.swing.JFrame {
         jButton10.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jButton10.setForeground(new java.awt.Color(51, 51, 51));
         jButton10.setText("4");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jButton11.setBackground(new java.awt.Color(204, 204, 204));
         jButton11.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jButton11.setForeground(new java.awt.Color(51, 51, 51));
         jButton11.setText("5");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jButton12.setBackground(new java.awt.Color(204, 204, 204));
         jButton12.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
@@ -120,16 +119,31 @@ public class CalculatorUI extends javax.swing.JFrame {
         jButton14.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jButton14.setForeground(new java.awt.Color(51, 51, 51));
         jButton14.setText("3");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
 
         jButton15.setBackground(new java.awt.Color(204, 204, 204));
         jButton15.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jButton15.setForeground(new java.awt.Color(51, 51, 51));
         jButton15.setText("1");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
 
         jButton16.setBackground(new java.awt.Color(204, 204, 204));
         jButton16.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jButton16.setForeground(new java.awt.Color(51, 51, 51));
         jButton16.setText("2");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
 
         jButton17.setBackground(new java.awt.Color(204, 204, 204));
         jButton17.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
@@ -257,8 +271,28 @@ public class CalculatorUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        this.screen.setText("O");
+        this.screen.setText(this.screen.getText() + "0");
     }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        this.screen.setText(this.screen.getText() + "3");
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        this.screen.setText(this.screen.getText() + "1");
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        this.screen.setText(this.screen.getText() + "2");
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        this.screen.setText(this.screen.getText() + "4");
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        this.screen.setText(this.screen.getText() + "5");
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     /**
      * @param args the command line arguments
