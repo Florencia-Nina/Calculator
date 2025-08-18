@@ -60,6 +60,11 @@ public class CalculatorUI extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(51, 51, 51));
         jButton2.setText("DEL");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
@@ -330,6 +335,13 @@ public class CalculatorUI extends javax.swing.JFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         this.screen.setText(this.screen.getText() + "9");
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    String currentText = screen.getText();
+    if (!currentText.isEmpty()){
+        screen.setText(currentText.substring(0, currentText.length() -1));
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
