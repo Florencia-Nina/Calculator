@@ -3,14 +3,12 @@ package calculator;
 public class CalculatorUI extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CalculatorUI.class.getName());
-
-    public float firstnumber;
-    public float secondnumber;
-    public float operator;
+    private Calculator calculator;
     
     public CalculatorUI() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.calculator = new Calculator();
     }
 
     /**
@@ -74,11 +72,21 @@ public class CalculatorUI extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(51, 51, 51));
         jButton3.setText("/");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(204, 204, 204));
         jButton4.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(51, 51, 51));
         jButton4.setText("*");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton6.setBackground(new java.awt.Color(204, 204, 204));
         jButton6.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
@@ -184,11 +192,21 @@ public class CalculatorUI extends javax.swing.JFrame {
         jButton17.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jButton17.setForeground(new java.awt.Color(51, 51, 51));
         jButton17.setText(".");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
 
         jButton19.setBackground(new java.awt.Color(204, 204, 204));
         jButton19.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         jButton19.setForeground(new java.awt.Color(51, 51, 51));
         jButton19.setText("-");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
 
         jButton20.setBackground(new java.awt.Color(204, 204, 204));
         jButton20.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
@@ -302,7 +320,29 @@ public class CalculatorUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        try {
+        if (screen.getText().isEmpty()) {
+            screen.setText("Error: Falta operando");
+            return;
+        }
+        
+        calculator.setSecondNumber(Float.parseFloat(screen.getText()));
+        float result = calculator.calculate();
+
+        // Mostrar resultado formateado (elimina .0 si es entero)
+        if (result == (int) result) {
+            screen.setText(String.valueOf((int) result));
+        } else {
+            screen.setText(String.valueOf(result));
+        }
+        
+    } catch (NumberFormatException e) {
+        screen.setText("Error: Entrada inválida");
+    } catch (ArithmeticException e) {
+        screen.setText("Error: " + e.getMessage());
+    } catch (UnsupportedOperationException e) {
+        screen.setText("Error: " + e.getMessage());
+    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
@@ -353,21 +393,44 @@ public class CalculatorUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        this.firstnumber = Float.parseFloat(this.screen.getText());
-        this.operator =  "+";
+                                              
+        this.calculator.setFirstNumber(Float.parseFloat(this.screen.getText()));
+        this.calculator.setOperator("+");
         this.screen.setText("");
         
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        this.calculator.setFirstNumber(Float.parseFloat(this.screen.getText()));
+        this.calculator.setOperator("-");
+        this.screen.setText("");
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        this.calculator.setFirstNumber(Float.parseFloat(this.screen.getText()));
+        this.calculator.setOperator("*");
+        this.screen.setText("");
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        this.calculator.setFirstNumber(Float.parseFloat(this.screen.getText()));
+        this.calculator.setOperator("/");
+        this.screen.setText("");
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        String currentText = screen.getText();
+        if (!currentText.contains(".")) { 
+        screen.setText(currentText + ".");
+        }
+
+    }//GEN-LAST:event_jButton17ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
