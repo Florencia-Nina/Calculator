@@ -3,6 +3,7 @@ package calculator;
 public class CalculatorUI extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(CalculatorUI.class.getName());
+    
     private Calculator calculator;
     
     public CalculatorUI() {
@@ -39,17 +40,19 @@ public class CalculatorUI extends javax.swing.JFrame {
         jButton17 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
         screen.setBackground(new java.awt.Color(255, 255, 255));
+        screen.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
         screen.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         screen.setOpaque(true);
 
         jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 51, 51));
         jButton1.setText("=");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -59,7 +62,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Liberation Sans", 1, 16)); // NOI18N
         jButton2.setForeground(new java.awt.Color(51, 51, 51));
         jButton2.setText("DEL");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -69,7 +72,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton3.setBackground(new java.awt.Color(204, 204, 204));
-        jButton3.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton3.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(51, 51, 51));
         jButton3.setText("/");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -79,7 +82,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton4.setBackground(new java.awt.Color(204, 204, 204));
-        jButton4.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(51, 51, 51));
         jButton4.setText("*");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -89,7 +92,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton6.setBackground(new java.awt.Color(204, 204, 204));
-        jButton6.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton6.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton6.setForeground(new java.awt.Color(51, 51, 51));
         jButton6.setText("7");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +102,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton7.setBackground(new java.awt.Color(204, 204, 204));
-        jButton7.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton7.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton7.setForeground(new java.awt.Color(51, 51, 51));
         jButton7.setText("8");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +112,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton8.setBackground(new java.awt.Color(204, 204, 204));
-        jButton8.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton8.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton8.setForeground(new java.awt.Color(51, 51, 51));
         jButton8.setText("9");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +122,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton9.setBackground(new java.awt.Color(204, 204, 204));
-        jButton9.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton9.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton9.setForeground(new java.awt.Color(51, 51, 51));
         jButton9.setText("+");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +132,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton10.setBackground(new java.awt.Color(204, 204, 204));
-        jButton10.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton10.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton10.setForeground(new java.awt.Color(51, 51, 51));
         jButton10.setText("4");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
@@ -139,7 +142,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton11.setBackground(new java.awt.Color(204, 204, 204));
-        jButton11.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton11.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton11.setForeground(new java.awt.Color(51, 51, 51));
         jButton11.setText("5");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +152,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton12.setBackground(new java.awt.Color(204, 204, 204));
-        jButton12.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton12.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton12.setForeground(new java.awt.Color(51, 51, 51));
         jButton12.setText("6");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -159,7 +162,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton14.setBackground(new java.awt.Color(204, 204, 204));
-        jButton14.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton14.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton14.setForeground(new java.awt.Color(51, 51, 51));
         jButton14.setText("3");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +172,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton15.setBackground(new java.awt.Color(204, 204, 204));
-        jButton15.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton15.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton15.setForeground(new java.awt.Color(51, 51, 51));
         jButton15.setText("1");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
@@ -179,7 +182,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton16.setBackground(new java.awt.Color(204, 204, 204));
-        jButton16.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton16.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton16.setForeground(new java.awt.Color(51, 51, 51));
         jButton16.setText("2");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
@@ -189,7 +192,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton17.setBackground(new java.awt.Color(204, 204, 204));
-        jButton17.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton17.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton17.setForeground(new java.awt.Color(51, 51, 51));
         jButton17.setText(".");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -199,7 +202,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton19.setBackground(new java.awt.Color(204, 204, 204));
-        jButton19.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton19.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton19.setForeground(new java.awt.Color(51, 51, 51));
         jButton19.setText("-");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
@@ -209,12 +212,22 @@ public class CalculatorUI extends javax.swing.JFrame {
         });
 
         jButton20.setBackground(new java.awt.Color(204, 204, 204));
-        jButton20.setFont(new java.awt.Font("Liberation Sans", 0, 18)); // NOI18N
+        jButton20.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
         jButton20.setForeground(new java.awt.Color(51, 51, 51));
         jButton20.setText("0");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton20ActionPerformed(evt);
+            }
+        });
+
+        jButton5.setBackground(new java.awt.Color(204, 204, 204));
+        jButton5.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(0, 0, 0));
+        jButton5.setText("AC");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
             }
         });
 
@@ -244,9 +257,9 @@ public class CalculatorUI extends javax.swing.JFrame {
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
@@ -261,7 +274,8 @@ public class CalculatorUI extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -270,19 +284,21 @@ public class CalculatorUI extends javax.swing.JFrame {
                 .addGap(37, 37, 37)
                 .addComponent(screen, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -297,7 +313,7 @@ public class CalculatorUI extends javax.swing.JFrame {
                             .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(56, 56, 56))
@@ -322,7 +338,7 @@ public class CalculatorUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
         if (screen.getText().isEmpty()) {
-            screen.setText("Error: Falta operando");
+            screen.setText("Error: Missing operand");
             return;
         }
         
@@ -337,7 +353,7 @@ public class CalculatorUI extends javax.swing.JFrame {
         }
         
     } catch (NumberFormatException e) {
-        screen.setText("Error: Entrada inválida");
+        screen.setText("Error: invalid input");
     } catch (ArithmeticException e) {
         screen.setText("Error: " + e.getMessage());
     } catch (UnsupportedOperationException e) {
@@ -418,12 +434,17 @@ public class CalculatorUI extends javax.swing.JFrame {
         this.screen.setText("");
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        this.screen.setText("");
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         String currentText = screen.getText();
-        if (!currentText.contains(".")) { 
+    if (currentText.isEmpty()) {
+        screen.setText("0.");
+    } else if (!currentText.contains(".")) {
         screen.setText(currentText + ".");
         }
-
     }//GEN-LAST:event_jButton17ActionPerformed
 
     /**
@@ -461,6 +482,7 @@ public class CalculatorUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
