@@ -120,5 +120,6 @@ Contributions are welcome! Please follow these steps:
 This project is licensed under the MIT License - see the [MIT License overview](https://opensource.org/licenses/MIT) for details.
 ---
 
-Developed with ❤️ using Java Swing in Apache NetBeans
-```
+## Developed with ❤️ using Java Swing in Apache NetBeans
+
+---
